@@ -95,4 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
     easing: "easeOutExpo",
     delay: 2000,
   });
+
+  console.log("Anime runs");
 });

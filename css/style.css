@@ -19,7 +19,7 @@ h3 {
 body {
   width: 100vw;
   height: 100vh;
-  background-image: url(../img/porto.jpg);
+  background-image: url(../img/porto-min.jpg);
   background-position: center;
   background-size: cover;
   display: grid;
