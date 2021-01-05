@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed";
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../img/porto.jpg);
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-content: center;
+}
+
+/* Navigation */
+
+.nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 50px;
+}
+
+.nav-container h1 {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.hamburger div {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.hamburger .short {
+  width: 15px;
+}
+
+.hamburger div:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.info-wrapper {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.info-wrapper span {
+  margin-right: 20px;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  position: relative;
+}
+
+.line-container {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.one,
+.two,
+.three {
+  width: 2px;
+  background-color: #fff;
+}
+
+.one {
+  height: 8px;
+  margin-right: 3px;
+}
+
+.two {
+  height: 6px;
+  margin-right: 3px;
+}
+
+.three {
+  height: 15px;
+}
+
+/* Overlays */
+
+.overlay-wrapper {
+  position: absolute;
+  z-index: -1000;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+}
+
+.overlay-wrapper .overlay {
+  flex: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Middle Content */
+
+.middle-wrapper {
+  text-align: center;
+}
+
+.middle-wrapper h3 {
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+.title {
+  display: flex;
+}
+
+.letter {
+  font-size: 120px;
+  margin-bottom: 10px;
+}
+
+.middle-wrapper a {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+}
+
+.middle-wrapper a::after {
+  content: "";
+  height: 2px;
+  width: 50px;
+  background-color: transparent;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 14px);
+  transition: all 0.2s ease-in;
+  transition-delay: 0.05s;
+}
+
+.middle-wrapper a:hover::after {
+  transform: translate(-50%, 5px);
+  background-color: #fff;
+}
+
+/* Scroll Circle */
+
+.scroll-circle {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60px;
+  width: 60px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-circle i {
+  transform: scale(0.85);
+  margin-top: 2px;
+}
